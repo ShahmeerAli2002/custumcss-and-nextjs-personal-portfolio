@@ -1,0 +1,112 @@
+.contactSection {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
+}
+
+.contactContainer {
+  max-width: 800px;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 195, 255, 0.3);
+  border: 1px solid #00f7ff;
+  animation: neonPulse 2s infinite;
+}
+
+.contactTitle {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff;
+  animation: neonPulse 2s infinite;
+}
+
+.contactDescription {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00f7ff;
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contactItem {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  border: 1px solid #00f7ff;
+  box-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
+  animation: neonPulse 2s infinite;
+}
+
+.contactItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+}
+
+.contactItem h3 {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: 0.5rem;
+  color: #00f7ff;
+}
+
+.contactItem p {
+  color: #00f7ff;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
+    text-shadow: 0 0 10px #00f7ff;
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.8);
+    text-shadow: 0 0 20px #00f7ff;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
+    text-shadow: 0 0 10px #00f7ff;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactSection {
+    padding: 0.5rem;
+  }
+  
+  .contactContainer {
+    padding: 1rem;
+  }
+  
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactItem {
+    padding: 0.8rem;
+  }
+
+  .contactTitle {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contactDescription {
+    font-size: 0.8rem;
+  }
+}
